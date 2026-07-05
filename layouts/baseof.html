@@ -3,23 +3,93 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ .Site.Title }}</title>
-  <meta name="description" content="{{ .Site.Params.description }}">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  {{- $title := .Site.Title -}}
+  {{- if and .Title (ne .Title .Site.Title) -}}{{ $title = printf "%s · %s" .Title .Site.Title }}{{- end -}}
+  {{- $desc := .Site.Params.description -}}
+  {{- with .Description }}{{ $desc = . }}{{ end -}}
+  {{- $ogImage := absURL (or .Site.Params.ogImage "images/profile.jpg") -}}
+
+  <title>{{ $title }}</title>
+  <meta name="description" content="{{ $desc }}">
+  <meta name="author" content="Kofi Ampomah">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
+
+  <!-- theme-color per scheme -->
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kofi Ampomah">
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ $desc }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:image" content="{{ $ogImage }}">
+  <meta property="og:image:alt" content="Kofi Ampomah">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $title }}">
+  <meta name="twitter:description" content="{{ $desc }}">
+  <meta name="twitter:image" content="{{ $ogImage }}">
+
+  <!-- No-flash theme init: stored > system > dark default -->
+  <script>
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search).get('theme');
+        var t = (q === 'light' || q === 'dark') ? q : localStorage.getItem('theme');
+        if (!t) { t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+        document.documentElement.setAttribute('data-theme', t);
+        if (q === 'light' || q === 'dark') { localStorage.setItem('theme', t); }
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+    })();
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@300;400;700&family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   {{ $style := resources.Get "ananke/css/custom.css" | minify }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+  <!-- JSON-LD: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kofi Ampomah",
+    "jobTitle": "PhD Student, Computer Science — Security & Privacy Researcher",
+    "url": "{{ .Site.BaseURL }}",
+    "image": "{{ absURL "images/profile.jpg" }}",
+    "email": "mailto:kampomah@crimson.ua.edu",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "The University of Alabama",
+      "url": "https://www.ua.edu/"
+    },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University of Ghana" },
+      { "@type": "CollegeOrUniversity", "name": "Ghana Communication Technology University" }
+    ],
+    "knowsAbout": ["Usable Security and Privacy", "Human-Centered Security", "Data Security", "AI Policy", "Cybersecurity", "Adversarial Machine Learning"],
+    "sameAs": [
+      "https://github.com/Ampomah-Kofi",
+      "https://www.linkedin.com/in/kofi-ampomah-306771189/",
+      "https://scholar.google.com/citations?user=4Z_7x2EAAAAJ&hl=en"
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a href="#about" class="skip-link">Skip to main content</a>
   {{ block "main" . }}{{ end }}
   <footer>
     <div class="footer__inner">
-      <span>&copy; {{ now.Format "2006" }} Kofi Ampomah</span>
+      <span>&copy; {{ now.Format "2006" }} Kofi Ampomah &nbsp;·&nbsp; Updated {{ now.Format "Jan 2006" }}</span>
       <div class="footer__links">
         <a href="mailto:kampomah@crimson.ua.edu">Email</a>
         <a href="https://github.com/Ampomah-Kofi" target="_blank" rel="noopener">GitHub</a>

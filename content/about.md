@@ -28,4 +28,4 @@ I am a PhD student in Computer Science at The University of Alabama (Tuscaloosa)
 - Natural Language Processing (NLP)
 - Third-party bot ecosystems on social platforms
 
-[Back to Home](/) | [Projects](projects)
+[Back to Home](/) | [Projects](/projects/)

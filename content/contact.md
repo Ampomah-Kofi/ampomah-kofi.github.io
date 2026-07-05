@@ -12,4 +12,4 @@ layout = 'contact'
 - **GitHub**: [Ampomah-Kofi](https://github.com/Ampomah-Kofi)
 - **Google Scholar**: [Kofi Ampomah](https://scholar.google.com/citations?user=4Z_7x2EAAAAJ&hl=en)
 
-[Back to Home](/) | [About](about)
+[Back to Home](/) | [About](/about/)

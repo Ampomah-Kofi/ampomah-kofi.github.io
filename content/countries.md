@@ -12,4 +12,4 @@ layout = 'countries'
 - **Qatar** — Middle East
 - **USA** — Current residence (Tuscaloosa, Alabama)
 
-[Back to Home](/) | [About](about)
+[Back to Home](/) | [About](/about/)

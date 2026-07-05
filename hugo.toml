@@ -1,11 +1,13 @@
-baseURL = 'https://kampomah.github.io/my_personalphd_website/'
+baseURL = 'https://ampomah-kofi.github.io/'
 languageCode = 'en-us'
-title = 'Kofi Ampomah'
+title = 'Kofi Ampomah — PhD · AI Security & Privacy'
 theme = 'ananke'
 publishDir = 'docs'
 
 [params]
-  description = "PhD Student in Computer Science · UA-SPECTRAL Lab · University of Alabama"
+  description = "Kofi Ampomah — Security & Privacy Researcher and PhD Student at the University of Alabama (UA-SPECTRAL Lab). Usable security & privacy, human-centered security, data security, AI policy, and adversarial ML. Seeking a Summer 2027 security & privacy internship."
+  author = "Kofi Ampomah"
+  ogImage = "images/profile.jpg"
   text_color = ""
   background_color_class = "bg-near-black"
   featured_image = ""
@@ -15,7 +17,7 @@ publishDir = 'docs'
   networks = ["github", "linkedin"]
 
 [params.ananke.social.networks.github]
-  profile = "kampomah"
+  profile = "Ampomah-Kofi"
 
 [params.ananke.social.networks.linkedin]
   profile = "kofi-ampomah-306771189"

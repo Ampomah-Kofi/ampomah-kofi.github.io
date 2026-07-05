@@ -420,7 +420,7 @@
     <div class="card skill-card reveal reveal-delay-1">
       <div class="skill-card__head"><i class="fa-solid fa-code"></i> Programming</div>
       <div class="skill-badges">
-        <span class="skill-badge">Python</span><span class="skill-badge">JavaScript</span><span class="skill-badge">SQL</span>
+        <span class="skill-badge">Python</span><span class="skill-badge">SQL</span>
         <span class="skill-badge">Bash</span><span class="skill-badge">LaTeX</span><span class="skill-badge">HTML / CSS</span><span class="skill-badge">MATLAB</span>
       </div>
     </div>
@@ -435,7 +435,7 @@
       <div class="skill-card__head"><i class="fa-solid fa-wrench"></i> Tools &amp; Platforms</div>
       <div class="skill-badges">
         <span class="skill-badge">Git</span><span class="skill-badge">Linux</span><span class="skill-badge">Docker</span>
-        <span class="skill-badge">Jupyter</span><span class="skill-badge">Google Colab</span><span class="skill-badge">VS Code</span><span class="skill-badge">HPC / Slurm</span><span class="skill-badge">Playwright</span>
+        <span class="skill-badge">Jupyter</span><span class="skill-badge">Google Colab</span><span class="skill-badge">VS Code</span><span class="skill-badge">Playwright</span>
       </div>
     </div>
     <div class="card skill-card skill-card--agents reveal">
@@ -446,7 +446,7 @@
         <span class="skill-badge skill-badge--accent">MCP (Model Context Protocol)</span><span class="skill-badge skill-badge--accent">Claude API (Anthropic)</span>
         <span class="skill-badge skill-badge--accent">ChatGPT / GPT-4o</span><span class="skill-badge skill-badge--accent">Gemini API</span>
         <span class="skill-badge skill-badge--accent">OpenAI Agents SDK</span><span class="skill-badge skill-badge--accent">LlamaIndex</span>
-        <span class="skill-badge skill-badge--accent">RAG Pipelines</span><span class="skill-badge skill-badge--accent">ChromaDB / FAISS</span>
+        <span class="skill-badge skill-badge--accent">RAG Pipelines</span>
         <span class="skill-badge skill-badge--accent">Cursor AI</span><span class="skill-badge skill-badge--accent">GitHub Copilot</span>
         <span class="skill-badge skill-badge--accent">Ollama</span><span class="skill-badge skill-badge--accent">Prompt Engineering</span>
       </div>
@@ -740,19 +740,26 @@
 
 <script>
 (function () {
-  /* page loader */
+  /* page loader — guaranteed minimum display time so the welcome is seen */
   var pgLoader = document.getElementById('pgLoader');
+  var loaderStart = Date.now();
+  var MIN_SHOW = 2000; /* ms the splash stays visible even on fast loads */
   function hideLoader() {
     if (!pgLoader) return;
     pgLoader.classList.add('hide');
-    setTimeout(function () { if (pgLoader.parentNode) pgLoader.remove(); pgLoader = null; }, 600);
+    setTimeout(function () { if (pgLoader && pgLoader.parentNode) pgLoader.remove(); pgLoader = null; }, 600);
+  }
+  function hideAfterMin() {
+    var wait = Math.max(0, MIN_SHOW - (Date.now() - loaderStart));
+    setTimeout(hideLoader, wait);
   }
   if (pgLoader) {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       hideLoader();
     } else {
-      window.addEventListener('load', function () { setTimeout(hideLoader, 900); });
-      setTimeout(hideLoader, 3000); /* fallback: never trap the visitor */
+      if (document.readyState === 'complete') { hideAfterMin(); }
+      else { window.addEventListener('load', hideAfterMin); }
+      setTimeout(hideLoader, 4500); /* fallback: never trap the visitor */
     }
   }
 

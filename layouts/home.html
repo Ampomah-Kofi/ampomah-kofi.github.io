@@ -458,7 +458,7 @@
 <section id="experience" class="section">
   <div class="section-head reveal">
     <span class="section-eyebrow">experience</span>
-    <h2 class="section-title">Work &amp; Research History</h2>
+    <h2 class="section-title">Work &amp; Experience</h2>
   </div>
   <div class="card card--pad reveal">
     {{ range slice
@@ -778,6 +778,24 @@
       syncToggle();
     });
   }
+
+  /* equal-height project cards with view-more toggle */
+  var COLLAPSE = 330;
+  document.querySelectorAll('.proj-card').forEach(function (card) {
+    if (card.scrollHeight <= COLLAPSE + 12) return; /* already fits — leave it */
+    card.classList.add('is-collapsed');
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'proj-card__more';
+    btn.innerHTML = 'View more <i class="fa-solid fa-chevron-down"></i>';
+    btn.addEventListener('click', function () {
+      var collapsed = card.classList.toggle('is-collapsed');
+      btn.innerHTML = collapsed
+        ? 'View more <i class="fa-solid fa-chevron-down"></i>'
+        : 'View less <i class="fa-solid fa-chevron-up"></i>';
+    });
+    card.appendChild(btn);
+  });
 
   /* scroll reveal */
   var obs = new IntersectionObserver(function (entries) {

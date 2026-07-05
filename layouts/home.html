@@ -13,15 +13,28 @@
   <div class="nav__inner">
     <a href="#home" class="nav__brand">Kofi Ampomah</a>
     <div class="nav__links" id="navLinks">
-      <a href="#about"          class="nav__link">About</a>
-      <a href="#security"       class="nav__link">Security</a>
-      <a href="#research"       class="nav__link">Research</a>
-      <a href="#publications"   class="nav__link">Publications</a>
-      <a href="#skills"         class="nav__link">Skills</a>
-      <a href="#experience"     class="nav__link">Experience</a>
-      <a href="#awards"         class="nav__link">Awards</a>
-      <a href="#certifications" class="nav__link">Certs</a>
-      <a href="#contact"        class="nav__link">Contact</a>
+      <a href="#about"    class="nav__link">About</a>
+      <a href="#security" class="nav__link">Security</a>
+
+      <div class="nav__group">
+        <button type="button" class="nav__link nav__toggle" aria-expanded="false">Research <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+        <div class="nav__menu">
+          <a href="#research"     class="nav__sublink">Active Projects</a>
+          <a href="#publications" class="nav__sublink">Publications</a>
+        </div>
+      </div>
+
+      <div class="nav__group">
+        <button type="button" class="nav__link nav__toggle" aria-expanded="false">Background <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+        <div class="nav__menu">
+          <a href="#skills"         class="nav__sublink">Skills</a>
+          <a href="#experience"     class="nav__sublink">Experience</a>
+          <a href="#awards"         class="nav__sublink">Awards</a>
+          <a href="#certifications" class="nav__sublink">Certifications</a>
+        </div>
+      </div>
+
+      <a href="#contact" class="nav__link">Contact</a>
     </div>
     <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
       <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
@@ -816,6 +829,24 @@
     });
   }
 
+  /* nav dropdown groups (click / tap to toggle) */
+  var navGroups = Array.prototype.slice.call(document.querySelectorAll('.nav__group'));
+  navGroups.forEach(function (g) {
+    var t = g.querySelector('.nav__toggle');
+    if (!t) return;
+    t.addEventListener('click', function (e) {
+      e.preventDefault(); e.stopPropagation();
+      var wasOpen = g.classList.contains('open');
+      navGroups.forEach(function (o) { o.classList.remove('open'); o.querySelector('.nav__toggle').setAttribute('aria-expanded', 'false'); });
+      if (!wasOpen) { g.classList.add('open'); t.setAttribute('aria-expanded', 'true'); }
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.nav__group')) {
+      navGroups.forEach(function (o) { o.classList.remove('open'); o.querySelector('.nav__toggle').setAttribute('aria-expanded', 'false'); });
+    }
+  });
+
   /* show-more for news list */
   var newsSection = document.getElementById('news');
   if (newsSection) {
@@ -902,11 +933,12 @@
   });
 
   /* smooth-scroll nav links + close menu on click */
-  document.querySelectorAll('.nav__link[href^="#"], .nav__brand[href^="#"]').forEach(function (a) {
+  document.querySelectorAll('.nav__link[href^="#"], .nav__sublink[href^="#"], .nav__brand[href^="#"]').forEach(function (a) {
     a.addEventListener('click', function (e) {
       e.preventDefault();
       if (links)  { links.classList.remove('open'); }
       if (toggle) { toggle.classList.remove('open'); toggle.setAttribute('aria-expanded', false); }
+      navGroups.forEach(function (o) { o.classList.remove('open'); o.querySelector('.nav__toggle').setAttribute('aria-expanded', 'false'); });
       var t = document.querySelector(this.getAttribute('href'));
       if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });

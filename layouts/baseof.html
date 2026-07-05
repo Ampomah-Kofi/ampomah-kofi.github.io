@@ -53,8 +53,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  {{ $style := resources.Get "ananke/css/custom.css" | minify }}
-  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+  {{ $style := resources.Get "ananke/css/custom.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 
   <!-- JSON-LD: Person -->
   <script type="application/ld+json">

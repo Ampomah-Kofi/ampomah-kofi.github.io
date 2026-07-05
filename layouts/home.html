@@ -678,12 +678,12 @@
   <div class="section-head reveal">
     <span class="section-eyebrow">countries</span>
     <h2 class="section-title">Countries Visited</h2>
-    <p class="section-sub">Home: Ghana &nbsp;·&nbsp; Current: USA (Alabama) &nbsp;·&nbsp; Transit: Rwanda, Qatar</p>
+    <p class="section-sub">Home: Ghana &nbsp;·&nbsp; Current: USA (Alabama, plus 4 more states explored) &nbsp;·&nbsp; Transit: Rwanda, Qatar</p>
   </div>
   <div class="country-grid">
     {{ range slice
       (dict "flag" "gh" "name" "Ghana" "tag" "West Africa · Accra" "badge" "Home Country" "bcls" "country-card__badge--home")
-      (dict "flag" "us" "name" "United States" "tag" "Tuscaloosa · Atlanta" "badge" "Current" "bcls" "country-card__badge--current")
+      (dict "flag" "us" "name" "United States" "tag" "5 states — Alabama · Georgia · South Carolina · Kentucky · Indiana" "badge" "Current" "bcls" "country-card__badge--current")
       (dict "flag" "rw" "name" "Rwanda" "tag" "East Africa" "badge" "Transit" "bcls" "")
       (dict "flag" "qa" "name" "Qatar" "tag" "Middle East" "badge" "Transit" "bcls" "") }}
     <div class="card country-card reveal">

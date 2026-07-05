@@ -474,11 +474,53 @@
     <h2 class="section-title">Professional Experience</h2>
   </div>
   <div class="card card--pad reveal">
+    <!-- The University of Alabama: two roles nested under one company (LinkedIn style) -->
+    <div class="exp-item reveal">
+      <div class="exp-item__rail">
+        <div class="exp-item__node"><i class="fa-solid fa-building-columns"></i></div>
+        <div class="exp-item__line"></div>
+      </div>
+      <div class="exp-item__body">
+        <div class="exp-item__head">
+          <p class="exp-item__company">The University of Alabama</p>
+          <span class="exp-item__period">1 yr</span>
+        </div>
+        <p class="exp-item__loc">Tuscaloosa, Alabama, United States</p>
+
+        <div class="exp-roles">
+          <div class="exp-role">
+            <div class="exp-item__head">
+              <p class="exp-role__title">Graduate Research Assistant</p>
+              <span class="exp-item__period">May 2026 – Present · 3 mos</span>
+            </div>
+            <p class="exp-role__meta">Internship · Hybrid</p>
+            <ul class="exp-item__pts">
+              <li>Graduate Research Assistant working with Dr. Tu Le on research in privacy, security, and human-centered AI.</li>
+              <li>Research post-quantum cryptography (PQC) approaches for AI authentication, exploring secure and resilient authentication for AI systems.</li>
+              <li>Contribute to work on the Model Context Protocol (MCP) ecosystem, studying security and governance in extensible AI tooling.</li>
+              <li>Use Python for data analysis, automation, and experimentation to support both research efforts.</li>
+            </ul>
+          </div>
+          <div class="exp-role">
+            <div class="exp-item__head">
+              <p class="exp-role__title">Graduate Research &amp; Teaching Assistant</p>
+              <span class="exp-item__period">Aug 2025 – May 2026 · 10 mos</span>
+            </div>
+            <p class="exp-role__meta">Full-time · On-site</p>
+            <ul class="exp-item__pts">
+              <li>Graduate Teaching Assistant for CS 438 Computer Networks at The University of Alabama.</li>
+              <li>Lead hands-on networking labs covering TCP/IP, Ping, Traceroute, routing, DNS, HTTP, Wireshark analysis, and Linux systems.</li>
+              <li>Grade labs, quizzes, and assignments using standardized rubrics and detailed written feedback.</li>
+              <li>Graduate Research Assistant in computer science with a focus on privacy, security, and human-centered AI.</li>
+              <li>Use Python for data analysis, automation, machine learning experiments, and system evaluation.</li>
+              <li>Build automation workflows using Python and PyAutoGUI for large-scale experimental pipelines.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
     {{ range slice
-      (dict "role" "Graduate Research Assistant" "org" "The University of Alabama" "period" "May 2026 – Present · 3 mos" "loc" "Tuscaloosa, Alabama, USA · Hybrid · Internship" "icon" "fa-flask"
-        "pts" (slice "Graduate Research Assistant working with Dr. Tu Le on research in privacy, security, and human-centered AI." "Research post-quantum cryptography (PQC) approaches for AI authentication, exploring secure and resilient authentication for AI systems." "Contribute to work on the Model Context Protocol (MCP) ecosystem, studying security and governance in extensible AI tooling." "Use Python for data analysis, automation, and experimentation to support both research efforts."))
-      (dict "role" "Graduate Research & Teaching Assistant" "org" "The University of Alabama" "period" "Aug 2025 – May 2026 · 10 mos" "loc" "Tuscaloosa, Alabama, USA · On-site · Full-time" "icon" "fa-chalkboard-user"
-        "pts" (slice "Graduate Teaching Assistant for CS 438 Computer Networks at The University of Alabama." "Lead hands-on networking labs covering TCP/IP, Ping, Traceroute, routing, DNS, HTTP, Wireshark analysis, and Linux systems." "Grade labs, quizzes, and assignments using standardized rubrics and detailed written feedback." "Graduate Research Assistant in computer science with a focus on privacy, security, and human-centered AI." "Use Python for data analysis, automation, machine learning experiments, and system evaluation." "Build automation workflows using Python and PyAutoGUI for large-scale experimental pipelines."))
       (dict "role" "Digital Channels Instructor" "org" "IPMC Ghana" "period" "Jul 2024 – Jul 2025 · 1 yr 1 mo" "loc" "Greater Accra Region, Ghana · On-site · Full-time" "icon" "fa-person-chalkboard"
         "pts" (slice "Teach digital marketing at IPMC, guiding three active cohorts in the Diploma in Digital Marketing program." "Deliver interactive lectures, practical workshops, and one-on-one mentorship." "Equip students with skills in website design, SEO, social media marketing, and analytics." "Oversee students' project work with practical, scenario-based, real-life cases." "Prepare students for careers in the digital marketing industry."))
       (dict "role" "Large Language Model (LLM) Researcher" "org" "Datamaker_GH" "period" "Jan 2024 – May 2024 · 5 mos" "loc" "Ghana · Contract" "icon" "fa-database"

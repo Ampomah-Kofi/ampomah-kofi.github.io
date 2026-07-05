@@ -481,6 +481,11 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .nav__link:focus-visi
 .exp-item__pts { display: flex; flex-direction: column; gap: .35rem; }
 .exp-item__pts li { position: relative; padding-left: 1.1rem; font-size: .92rem; color: var(--muted); line-height: 1.5; }
 .exp-item__pts li::before { content: ""; position: absolute; left: 0; top: .55rem; width: 5px; height: 5px; border-radius: 50%; background: var(--subtle); }
+/* company block with nested roles (LinkedIn style) */
+.exp-item__company { font-size: 1.12rem; font-weight: 700; color: var(--text-strong); letter-spacing: -.015em; }
+.exp-roles { margin-top: .85rem; padding-left: 1.15rem; border-left: 2px solid var(--border); display: flex; flex-direction: column; gap: 1.25rem; }
+.exp-role__title { font-size: .98rem; font-weight: 600; color: var(--text-strong); letter-spacing: -.015em; }
+.exp-role__meta { font-size: .82rem; color: var(--subtle); margin-bottom: .5rem; }
 
 /* ════════ SKILLS ════════ */
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px,1fr)); gap: 1.25rem; }

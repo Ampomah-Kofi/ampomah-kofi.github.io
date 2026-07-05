@@ -8,10 +8,10 @@
 :root,
 :root[data-theme="light"] {
   --bg:            #ffffff;
-  --bg-alt:        #f5f5f7;
+  --bg-alt:        #f4f6fa;
   --surface:       #ffffff;
-  --surface-2:     #f5f5f7;
-  --surface-3:     #ececee;
+  --surface-2:     #f4f6fa;
+  --surface-3:     #e9edf4;
   --border:        rgba(0,0,0,.08);
   --border-strong: rgba(0,0,0,.14);
 
@@ -20,10 +20,10 @@
   --muted:         #6e6e73;
   --subtle:        #737378;
 
-  --accent:        #0071e3;
-  --accent-strong: #0077ed;
-  --accent-tint:   rgba(0,113,227,.10);
-  --accent-2:      #5e5ee8;
+  --accent:        #2f5fe3;
+  --accent-strong: #2450c9;
+  --accent-tint:   rgba(47,95,227,.10);
+  --accent-2:      #7c3aed;
   --signal:        #157f3d;
   --signal-tint:   rgba(21,127,61,.12);
 
@@ -52,12 +52,12 @@
   --muted:         #a1a1a6;
   --subtle:        #86868b;
 
-  --accent:        #2997ff;
-  --accent-strong: #4aa8ff;
-  --accent-tint:   rgba(41,151,255,.16);
-  --accent-2:      #9b9bff;
-  --signal:        #34c759;
-  --signal-tint:   rgba(52,199,89,.16);
+  --accent:        #6d8dff;
+  --accent-strong: #8aa4ff;
+  --accent-tint:   rgba(109,141,255,.16);
+  --accent-2:      #b195fa;
+  --signal:        #3fce6f;
+  --signal-tint:   rgba(63,206,111,.16);
 
   --z1: 0 2px 10px rgba(0,0,0,.5);
   --z2: 0 10px 34px rgba(0,0,0,.55);

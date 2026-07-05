@@ -483,7 +483,17 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .nav__link:focus-visi
 .exp-item__pts li::before { content: ""; position: absolute; left: 0; top: .55rem; width: 5px; height: 5px; border-radius: 50%; background: var(--subtle); }
 /* company block with nested roles (LinkedIn style) */
 .exp-item__company { font-size: 1.12rem; font-weight: 700; color: var(--text-strong); letter-spacing: -.015em; }
-.exp-roles { margin-top: .85rem; padding-left: 1.15rem; border-left: 2px solid var(--border); display: flex; flex-direction: column; gap: 1.25rem; }
+.exp-roles { position: relative; margin-top: .85rem; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 1.4rem; }
+.exp-roles::before {
+  content: ""; position: absolute; left: 4px; top: 7px; bottom: 7px; width: 2px; border-radius: 2px;
+  background: color-mix(in srgb, var(--accent) 55%, var(--border));
+}
+.exp-role { position: relative; }
+.exp-role::before {
+  content: ""; position: absolute; left: -1.5rem; top: 4px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--surface); border: 2px solid var(--accent); box-shadow: var(--z1);
+}
 .exp-role__title { font-size: .98rem; font-weight: 600; color: var(--text-strong); letter-spacing: -.015em; }
 .exp-role__meta { font-size: .82rem; color: var(--subtle); margin-bottom: .5rem; }
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on Kofi Ampomah — PhD · AI Security &amp; Privacy</title><link>https://ampomah-kofi.github.io/</link><description>Recent content in Home on Kofi Ampomah — PhD · AI Security &amp; Privacy</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 25 Apr 2026 16:15:47 -0500</lastBuildDate><atom:link href="https://ampomah-kofi.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Contact</title><link>https://ampomah-kofi.github.io/contact/</link><pubDate>Sat, 25 Apr 2026 16:15:47 -0500</pubDate><guid>https://ampomah-kofi.github.io/contact/</guid><description>&lt;h1 id="contact-me"&gt;Contact Me&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on Kofi Ampomah · PhD · AI Security &amp; Privacy</title><link>https://ampomah-kofi.github.io/</link><description>Recent content in Home on Kofi Ampomah · PhD · AI Security &amp; Privacy</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 25 Apr 2026 16:15:47 -0500</lastBuildDate><atom:link href="https://ampomah-kofi.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Contact</title><link>https://ampomah-kofi.github.io/contact/</link><pubDate>Sat, 25 Apr 2026 16:15:47 -0500</pubDate><guid>https://ampomah-kofi.github.io/contact/</guid><description>&lt;h1 id="contact-me"&gt;Contact Me&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Email&lt;/strong&gt;: &lt;a href="mailto:kampomah@crimson.ua.edu"&gt;kampomah@crimson.ua.edu&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;LinkedIn&lt;/strong&gt;: &lt;a href="https://www.linkedin.com/in/kofi-ampomah-306771189/"&gt;Kofi Ampomah&lt;/a&gt;&lt;/li&gt;
@@ -7,15 +7,15 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href="https://ampomah-kofi.github.io/"&gt;Back to Home&lt;/a&gt; | &lt;a href="https://ampomah-kofi.github.io/about/"&gt;About&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Countries Visited</title><link>https://ampomah-kofi.github.io/countries/</link><pubDate>Sat, 25 Apr 2026 16:15:39 -0500</pubDate><guid>https://ampomah-kofi.github.io/countries/</guid><description>&lt;h1 id="countries-i-have-visited"&gt;Countries I Have Visited&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Ghana&lt;/strong&gt; — Home country&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rwanda&lt;/strong&gt; — East Africa&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Qatar&lt;/strong&gt; — Middle East&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;USA&lt;/strong&gt; — Current residence (Tuscaloosa, Alabama)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ghana&lt;/strong&gt;: Home country&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rwanda&lt;/strong&gt;: East Africa&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Qatar&lt;/strong&gt;: Middle East&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;USA&lt;/strong&gt;: Current residence (Tuscaloosa, Alabama)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href="https://ampomah-kofi.github.io/"&gt;Back to Home&lt;/a&gt; | &lt;a href="https://ampomah-kofi.github.io/about/"&gt;About&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Research</title><link>https://ampomah-kofi.github.io/projects/</link><pubDate>Sat, 25 Apr 2026 16:15:19 -0500</pubDate><guid>https://ampomah-kofi.github.io/projects/</guid><description>&lt;h1 id="research-projects"&gt;Research Projects&lt;/h1&gt;
-&lt;p&gt;My research addresses critical challenges in AI trustworthiness, privacy, and security — with a particular focus on real-world social and medical systems.&lt;/p&gt;
+&lt;p&gt;My research addresses critical challenges in AI trustworthiness, privacy, and security, with a particular focus on real-world social and medical systems.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id="botlens--privacy-auditing-for-third-party-community-bots"&gt;BotLens — Privacy Auditing for Third-Party Community Bots&lt;/h2&gt;
+&lt;h2 id="botlens-privacy-auditing-for-third-party-community-bots"&gt;BotLens: Privacy Auditing for Third-Party Community Bots&lt;/h2&gt;
 &lt;p&gt;BotLens is a privacy auditing framework that systematically analyzes how third-party community bots on social platforms collect, process, and expose user data. As bots become deeply integrated into online communities (Discord, Reddit, Slack), users often have little visibility into what data these bots access. BotLens surfaces these hidden privacy risks and informs better platform governance.&lt;/p&gt;</description></item><item><title>About</title><link>https://ampomah-kofi.github.io/about/</link><pubDate>Sat, 25 Apr 2026 16:15:08 -0500</pubDate><guid>https://ampomah-kofi.github.io/about/</guid><description>&lt;h1 id="about-me"&gt;About Me&lt;/h1&gt;
 &lt;p&gt;I am a PhD student in Computer Science at The University of Alabama (Tuscaloosa), originally from Ghana. I am a member of the &lt;strong&gt;UA-SPECTRAL Lab&lt;/strong&gt;, where my research focuses on trustworthy AI, data security, and the complex intersections between machine learning and human behavior.&lt;/p&gt;
 &lt;h2 id="background"&gt;Background&lt;/h2&gt;

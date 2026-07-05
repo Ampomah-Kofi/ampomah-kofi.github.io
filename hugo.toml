@@ -1,11 +1,11 @@
 baseURL = 'https://ampomah-kofi.github.io/'
 languageCode = 'en-us'
-title = 'Kofi Ampomah — PhD · AI Security & Privacy'
+title = 'Kofi Ampomah · PhD · AI Security & Privacy'
 theme = 'ananke'
 publishDir = 'docs'
 
 [params]
-  description = "Kofi Ampomah — Security & Privacy Researcher and PhD Student at the University of Alabama (UA-SPECTRAL Lab). Usable security & privacy, human-centered security, data security, AI policy, and adversarial ML. Seeking a Summer 2027 security & privacy internship."
+  description = "Kofi Ampomah, Security & Privacy Researcher and PhD Student at the University of Alabama (UA-SPECTRAL Lab). Usable security & privacy, human-centered security, data security, AI policy, and adversarial ML. Seeking a Summer 2027 security & privacy internship."
   author = "Kofi Ampomah"
   ogImage = "images/profile.jpg"
   text_color = ""

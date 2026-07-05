@@ -7,9 +7,9 @@ layout = 'countries'
 
 # Countries I Have Visited
 
-- **Ghana** — Home country
-- **Rwanda** — East Africa
-- **Qatar** — Middle East
-- **USA** — Current residence (Tuscaloosa, Alabama)
+- **Ghana**: Home country
+- **Rwanda**: East Africa
+- **Qatar**: Middle East
+- **USA**: Current residence (Tuscaloosa, Alabama)
 
 [Back to Home](/) | [About](/about/)

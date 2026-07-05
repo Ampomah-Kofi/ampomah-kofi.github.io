@@ -34,7 +34,7 @@
   --ease: cubic-bezier(.28,.11,.32,1);
   --r: 20px;
   --r-sm: 14px;
-  --maxw: 980px;
+  --maxw: 860px;
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -273,8 +273,8 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .nav__link:focus-visi
 .btn--ghost:hover { background: var(--accent-tint); color: var(--accent-strong); }
 
 /* ════════ SECTIONS ════════ */
-.section { max-width: var(--maxw); margin: 0 auto; padding: 6rem 1.5rem; }
-.section-head { text-align: center; margin-bottom: 3rem; max-width: 720px; margin-left: auto; margin-right: auto; }
+.section { max-width: var(--maxw); margin: 0 auto; padding: 4.5rem 1.5rem; }
+.section-head { text-align: center; margin-bottom: 2.25rem; max-width: 680px; margin-left: auto; margin-right: auto; }
 .section-eyebrow {
   display: inline-block; font-size: .82rem; font-weight: 600; letter-spacing: .01em;
   color: var(--accent); margin-bottom: .8rem; text-transform: capitalize;
@@ -299,7 +299,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .nav__link:focus-visi
   transition: box-shadow .25s var(--ease), transform .25s var(--ease);
 }
 .card:hover { box-shadow: var(--z2); }
-.card--pad { padding: 2rem 2.25rem; }
+.card--pad { padding: 1.6rem 1.85rem; }
 .card--lift:hover { transform: translateY(-4px); box-shadow: var(--z3); }
 
 /* subtle gray inner panels sit on --bg-alt sections */
@@ -384,9 +384,9 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .nav__link:focus-visi
 .news-sub em { color: var(--text); font-style: italic; }
 
 /* ════════ AWARDS ════════ */
-.awards-grid { display: flex; flex-direction: column; gap: .85rem; }
+.awards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px,1fr)); gap: .85rem; }
 .award {
-  display: flex; align-items: center; gap: 1.2rem; padding: 1.15rem 1.5rem;
+  display: flex; align-items: center; gap: 1rem; padding: 1rem 1.2rem;
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-sm);
   box-shadow: var(--z1); transition: transform .2s var(--ease), box-shadow .2s;
 }

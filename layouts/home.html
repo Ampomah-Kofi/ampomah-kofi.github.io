@@ -816,6 +816,29 @@
     });
   }
 
+  /* show-more for news list */
+  var newsSection = document.getElementById('news');
+  if (newsSection) {
+    var newsItems = Array.prototype.slice.call(newsSection.querySelectorAll('.news-item'));
+    var NEWS_LIMIT = 3;
+    if (newsItems.length > NEWS_LIMIT) {
+      newsItems.slice(NEWS_LIMIT).forEach(function (it) { it.style.display = 'none'; });
+      var nbtn = document.createElement('button');
+      nbtn.type = 'button';
+      nbtn.className = 'news-more';
+      nbtn.innerHTML = 'Show all ' + newsItems.length + ' updates <i class="fa-solid fa-chevron-down"></i>';
+      var newsOpen = false;
+      nbtn.addEventListener('click', function () {
+        newsOpen = !newsOpen;
+        newsItems.slice(NEWS_LIMIT).forEach(function (it) { it.style.display = newsOpen ? 'flex' : 'none'; });
+        nbtn.innerHTML = newsOpen
+          ? 'Show less <i class="fa-solid fa-chevron-up"></i>'
+          : 'Show all ' + newsItems.length + ' updates <i class="fa-solid fa-chevron-down"></i>';
+      });
+      newsItems[0].parentNode.appendChild(nbtn);
+    }
+  }
+
   /* load-more for certification lists */
   var certSection = document.getElementById('certifications');
   if (certSection) {

@@ -1,5 +1,13 @@
 {{ define "main" }}
 
+<!-- ══ PAGE LOADER ══ -->
+<div class="pg-loader" id="pgLoader" aria-hidden="true">
+  <p class="pg-loader__hello">Welcome</p>
+  <p class="pg-loader__name">Kofi Ampomah</p>
+  <p class="pg-loader__tag">PhD Student in Computer Science &nbsp;·&nbsp; UA-SPECTRAL Lab</p>
+  <div class="pg-loader__bar"><span></span></div>
+</div>
+
 <!-- ══ STICKY NAV ══ -->
 <nav class="nav">
   <div class="nav__inner">
@@ -649,6 +657,22 @@
 
 <script>
 (function () {
+  /* page loader */
+  var pgLoader = document.getElementById('pgLoader');
+  function hideLoader() {
+    if (!pgLoader) return;
+    pgLoader.classList.add('hide');
+    setTimeout(function () { if (pgLoader.parentNode) pgLoader.remove(); pgLoader = null; }, 600);
+  }
+  if (pgLoader) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      hideLoader();
+    } else {
+      window.addEventListener('load', function () { setTimeout(hideLoader, 900); });
+      setTimeout(hideLoader, 3000); /* fallback: never trap the visitor */
+    }
+  }
+
   /* theme toggle */
   var root = document.documentElement;
   var tbtn = document.getElementById('themeToggle');

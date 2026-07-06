@@ -274,14 +274,14 @@
         <div class="proj-card__glyph">🧠</div>
         <div>
           <h3 class="proj-card__title">Adversarial Transferability in Medical Imaging</h3>
-          <p class="proj-card__sub">Beyond Attack Success Rate</p>
+          <p class="proj-card__sub">Attack Success Rate is Not All You Need</p>
         </div>
       </div>
-      <p class="proj-card__desc">Investigating adversarial transferability (adversarial examples crafted against one model deceiving another) in medical imaging AI, where cross-model vulnerabilities could directly impact patient safety.</p>
+      <p class="proj-card__desc">A systematic study across 4 medical imaging datasets, 7 models spanning CNNs and ViTs, 7 attacks, and 5 perturbation budgets, showing that Attack Success Rate alone is an inadequate measure of adversarial robustness in medical AI.</p>
       <ul class="proj-card__list">
-        <li>Multi-metric evaluation framework beyond simple attack success rate</li>
-        <li>Analysis of transferability patterns across model architectures</li>
-        <li>Robustness standards for trustworthy medical AI deployment</li>
+        <li>Multi-metric evaluation (ASR, SSIM, PSNR, L2) across 3,500 attack configurations</li>
+        <li>Finds ASR is decoupled from perceptual quality and perturbation strength across CNNs and ViTs</li>
+        <li>Cross-architecture transferability analysis: ViTs transfer uniformly, CNNs vary by model</li>
       </ul>
       <div class="proj-card__tags" style="margin-bottom:.9rem;">
         <span class="tag">Adversarial ML</span><span class="tag">Medical AI</span><span class="tag">Trustworthy AI</span><span class="tag">Robustness</span>
@@ -293,7 +293,7 @@
       <div class="proj-card__links">
         <a href="https://arxiv.org/abs/2604.16532" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> arXiv ↗</a>
         <a href="https://osf.io/4grsd/overview?view_only=c6246a2f9ea34a39a557da080c95ebed" target="_blank" rel="noopener"><i class="fa-solid fa-database"></i> OSF Preprint ↗</a>
-        <span class="pub-status"><i class="fa-solid fa-hourglass-half"></i> Under Review · 2026</span>
+        <span class="pub-status"><i class="fa-solid fa-circle-check"></i> Accepted · IEEE SMC 2026</span>
       </div>
     </div>
 
@@ -381,7 +381,7 @@
 
   <div class="scholar-metrics reveal">
     <div class="card scholar-stat"><p class="scholar-stat__num">1</p><p class="scholar-stat__label"><i class="fa-solid fa-book-open"></i>Published</p></div>
-    <div class="card scholar-stat scholar-stat--review"><p class="scholar-stat__num">1</p><p class="scholar-stat__label"><i class="fa-solid fa-hourglass-half"></i>Under Review</p></div>
+    <div class="card scholar-stat scholar-stat--review"><p class="scholar-stat__num">1</p><p class="scholar-stat__label"><i class="fa-solid fa-circle-check"></i>Accepted (IEEE)</p></div>
     <div class="card scholar-stat"><p class="scholar-stat__num">5</p><p class="scholar-stat__label"><i class="fa-solid fa-users"></i>Co-authors</p></div>
     <a href="https://scholar.google.com/citations?user=4Z_7x2EAAAAJ&hl=en" target="_blank" rel="noopener" class="card scholar-stat"><p class="scholar-stat__num"><i class="fa-brands fa-google" style="font-size:1.35rem;"></i></p><p class="scholar-stat__label">Scholar Profile</p></a>
   </div>
@@ -389,13 +389,16 @@
   <div class="card pub-card reveal">
     <div class="pub-card__year pub-card__year--accent">2026</div>
     <div>
-      <h3 class="pub-card__title">Beyond Attack Success Rate: A Multi-Metric Evaluation of Adversarial Transferability in Medical Imaging Models</h3>
-      <p class="pub-card__authors">E. Curl, <strong>K. Ampomah</strong>, M. Erfan, S. Dibbo</p>
-      <p class="pub-card__venue">arXiv Preprints · Under Review, 2026</p>
+      <h3 class="pub-card__title">Attack Success Rate is Not All You Need: A Comprehensive Adversarial Vulnerability Assessment in Medical AI</h3>
+      <p class="pub-card__authors">E. Curl*, <strong>K. Ampomah*</strong>, M. Erfan*, S. V. Dibbo &nbsp;<span style="font-weight:400;color:var(--subtle);font-size:.85em;">(*equal contribution, co-first author)</span></p>
+      <p class="pub-card__venue">IEEE International Conference on Systems, Man &amp; Cybernetics (SMC), 2026 · Bellevue, WA</p>
       <div class="proj-card__tags" style="margin-bottom:.65rem;">
-        <span class="tag">Adversarial ML</span><span class="tag">Medical Imaging</span><span class="tag">Trustworthy AI</span>
+        <span class="tag">Adversarial ML</span><span class="tag">Medical AI</span><span class="tag">Trustworthy AI</span>
       </div>
-      <a href="https://arxiv.org/abs/2604.16532" target="_blank" rel="noopener" class="pub-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i>arXiv:2604.16532</a>
+      <div style="display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;">
+        <span class="pub-status"><i class="fa-solid fa-circle-check"></i> Accepted · to appear in IEEE Xplore</span>
+        <a href="https://arxiv.org/abs/2604.16532" target="_blank" rel="noopener" class="pub-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i>arXiv:2604.16532</a>
+      </div>
     </div>
   </div>
 
@@ -609,6 +612,13 @@
     <div class="news-item">
       <span class="news-badge news-badge--new">2026</span>
       <div class="news-body">
+        <p class="news-title"><i class="fa-solid fa-award i-sig"></i>Paper Accepted at IEEE SMC 2026</p>
+        <p class="news-sub"><em>"Attack Success Rate is Not All You Need: A Comprehensive Adversarial Vulnerability Assessment in Medical AI"</em> was accepted to the 2026 IEEE International Conference on Systems, Man &amp; Cybernetics (Bellevue, WA · Oct 2026), to appear in IEEE Xplore.</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <span class="news-badge news-badge--new">2026</span>
+      <div class="news-body">
         <p class="news-title"><i class="fa-solid fa-flask i-sig"></i>Dissertation Pillar Three Study Now Running</p>
         <p class="news-sub">The <em>Authentication Autopilot Cascade Study</em> (a 2×2 between-subjects experiment on whether users notice over-broad AI agent permissions after multi-step authentication) is in the field and collecting data.</p>
       </div>
@@ -625,13 +635,6 @@
       <div class="news-body">
         <p class="news-title"><i class="fa-solid fa-shield-halved i-sig"></i>Completing Google Cybersecurity Professional Certificate</p>
         <p class="news-sub">Finishing the 8-course <em>Google Cybersecurity</em> program (SIEM tools, Linux &amp; SQL, network security, incident response, and threat detection), deepening applied security skills alongside my research.</p>
-      </div>
-    </div>
-    <div class="news-item">
-      <span class="news-badge news-badge--new">2026</span>
-      <div class="news-body">
-        <p class="news-title"><i class="fa-solid fa-file-circle-check"></i>Paper Under Review</p>
-        <p class="news-sub"><em>"Beyond Attack Success Rate: A Multi-Metric Evaluation of Adversarial Transferability in Medical Imaging Models"</em>, currently under peer review.</p>
       </div>
     </div>
     <div class="news-item">

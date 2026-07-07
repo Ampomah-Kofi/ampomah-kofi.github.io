@@ -551,6 +551,71 @@
   </div>
 </section>
 
+<!-- ══ CERTIFICATIONS ══ -->
+<section id="certifications" class="section">
+  <div class="section-head reveal">
+    <span class="section-eyebrow">certifications</span>
+    <h2 class="section-title">Professional Certificates</h2>
+    <p class="section-sub">16+ verified Credly badges: IBM Data Science, IBM ML, Google IT Support, Google Project Management, and more, plus 45+ course certificates spanning AI, data science, cybersecurity, project management, and digital marketing.</p>
+  </div>
+
+  <div class="link-banner reveal">
+    <p><i class="fa-solid fa-certificate"></i>View verified digital badges on Credly</p>
+    <a href="https://www.credly.com/users/ampomahkofi" target="_blank" rel="noopener" class="btn btn--ghost" style="font-size:.8rem;padding:.45rem 1.1rem;">Open Credly ↗</a>
+  </div>
+
+  <div class="cert-grid">
+    <div class="card cert-card reveal reveal-delay-1">
+      <div class="cert-card__head">
+        <div class="cert-card__glyph"><i class="fa-brands fa-google"></i></div>
+        <div><p class="cert-card__name">Google</p><p class="cert-card__count mono">15 Certificates · Coursera</p></div>
+      </div>
+      <ul class="cert-card__list">
+        <li class="hl"><i class="fa-solid fa-shield-halved"></i><span>Google Cybersecurity Professional Certificate <span class="cert-inprogress">COMPLETED 2026</span></span></li>
+        {{ range slice "Google Project Management Professional Certificate" "Capstone: Applying Project Management in the Real World" "Agile Project Management" "Project Execution: Running the Project" "Project Planning: Putting It All Together" "Google IT Support Professional Certificate" "IT Security: Defense against the Digital Dark Arts" "System Administration and IT Infrastructure Services" "Operating Systems and You: Becoming a Power User" "The Bits and Bytes of Computer Networking" "Project Initiation: Starting a Successful Project" "Foundations of Project Management" "Foundations of Cybersecurity" "Technical Support Fundamentals" "Google Analytics" }}
+        <li><i class="fa-solid fa-circle-check"></i><span>{{ . }}</span></li>
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="card cert-card reveal reveal-delay-2">
+      <div class="cert-card__head">
+        <div class="cert-card__glyph"><i class="fa-solid fa-microchip"></i></div>
+        <div><p class="cert-card__name">IBM</p><p class="cert-card__count mono">13 Certificates · Coursera</p></div>
+      </div>
+      <ul class="cert-card__list">
+        {{ range slice "IBM Data Science Professional Certificate" "Data Scientist Career Guide and Interview Preparation" "Generative AI: Elevate Your Data Science Career" "Applied Data Science Capstone" "Machine Learning with Python" "Data Visualization with Python" "Data Analysis with Python" "Databases and SQL for Data Science with Python" "Python Project for Data Science" "Python for Data Science, AI &amp; Development" "Data Science Methodology" "Tools for Data Science" "What is Data Science?" }}
+        <li><i class="fa-solid fa-circle-check"></i><span>{{ . }}</span></li>
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="card cert-card reveal reveal-delay-1">
+      <div class="cert-card__head">
+        <div class="cert-card__glyph"><i class="fa-brands fa-meta"></i></div>
+        <div><p class="cert-card__name">Meta</p><p class="cert-card__count mono">5 Certificates · Coursera</p></div>
+      </div>
+      <ul class="cert-card__list">
+        {{ range slice "Introduction to Social Media Marketing" "Social Media Management" "Advertising with Meta" "Fundamentals of Social Media Advertising" "Measure and Optimize Social Media Marketing Campaigns" }}
+        <li><i class="fa-solid fa-circle-check"></i><span>{{ . }}</span></li>
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="card cert-card reveal reveal-delay-2">
+      <div class="cert-card__head">
+        <div class="cert-card__glyph"><i class="fa-solid fa-award"></i></div>
+        <div><p class="cert-card__name">Others</p><p class="cert-card__count mono">12 Certificates · Various Providers</p></div>
+      </div>
+      <ul class="cert-card__list">
+        {{ range slice "Coursera: Data Science Orientation" "CVS Health: Introduction to Customer Service" "Macquarie University: Excel Fundamentals for Data Analysis" "Duke University: Data Science Math Skills" "4EU+ Alliance: Data Literacy" "J.P. Morgan: Software Engineering Job Simulation (Forage)" "Birdify: Learning Data Visualization" "Birdify: Excel Statistics Essential Training" "Birdify: Data Fluency – Exploring and Describing Data" "Birdify: Learning Data Analytics" "FestMan Learning: Microsoft Excel Fundamentals" "World Education Services: Verified International Academic Qualifications" }}
+        <li><i class="fa-solid fa-circle-check"></i><span>{{ . }}</span></li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- ══ AWARDS ══ -->
 <section id="awards" class="section">
   <div class="section-head reveal">
@@ -598,6 +663,60 @@
       <span class="award__year">{{ .year }}</span>
     </div>
     {{ end }}
+  </div>
+</section>
+
+<!-- ══ COUNTRIES ══ -->
+<section id="countries" class="section">
+  <div class="section-head reveal">
+    <span class="section-eyebrow">countries</span>
+    <h2 class="section-title">Countries Visited</h2>
+    <p class="section-sub">Home: Ghana &nbsp;·&nbsp; Current: USA (Alabama, plus 4 more states explored) &nbsp;·&nbsp; Transit: Rwanda, Qatar</p>
+  </div>
+  <div class="country-grid">
+    {{ range slice
+      (dict "flag" "gh" "name" "Ghana" "tag" "West Africa · Accra" "badge" "Home Country" "bcls" "country-card__badge--home")
+      (dict "flag" "us" "name" "United States" "tag" "5 states: Alabama · Georgia · South Carolina · Kentucky · Indiana" "badge" "Current" "bcls" "country-card__badge--current")
+      (dict "flag" "rw" "name" "Rwanda" "tag" "East Africa" "badge" "Transit" "bcls" "")
+      (dict "flag" "qa" "name" "Qatar" "tag" "Middle East" "badge" "Transit" "bcls" "") }}
+    <div class="card country-card reveal">
+      <img src="https://flagcdn.com/w80/{{ .flag }}.png" srcset="https://flagcdn.com/w160/{{ .flag }}.png 2x" alt="{{ .name }} flag" class="country-card__flag" loading="lazy">
+      <p class="country-card__name">{{ .name }}</p>
+      <p class="country-card__tag">{{ .tag }}</p>
+      <span class="country-card__badge {{ .bcls }}">{{ .badge }}</span>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact" class="section">
+  <div class="section-head reveal">
+    <span class="section-eyebrow">contact</span>
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-sub">Open to <strong>Summer 2027 security &amp; privacy internships</strong>, research collaborations, speaking invitations, and academic correspondence.</p>
+  </div>
+  <div class="contact-grid">
+    <a href="mailto:kampomah@crimson.ua.edu" class="card contact-card reveal reveal-delay-1">
+      <div class="contact-card__icon"><i class="fa-solid fa-envelope"></i></div>
+      <p class="contact-card__service">Email</p>
+      <p class="contact-card__value">kampomah@crimson.ua.edu</p>
+    </a>
+    <a href="https://www.linkedin.com/in/kofi-ampomah-306771189/" target="_blank" rel="noopener" class="card contact-card reveal reveal-delay-2">
+      <div class="contact-card__icon"><i class="fa-brands fa-linkedin-in"></i></div>
+      <p class="contact-card__service">LinkedIn</p>
+      <p class="contact-card__value">Kofi Ampomah</p>
+    </a>
+    <a href="https://github.com/Ampomah-Kofi" target="_blank" rel="noopener" class="card contact-card reveal reveal-delay-3">
+      <div class="contact-card__icon"><i class="fa-brands fa-github"></i></div>
+      <p class="contact-card__service">GitHub</p>
+      <p class="contact-card__value">@Ampomah-Kofi</p>
+    </a>
+    <a href="https://scholar.google.com/citations?user=4Z_7x2EAAAAJ&hl=en" target="_blank" rel="noopener" class="card contact-card reveal reveal-delay-4">
+      <div class="contact-card__icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      <p class="contact-card__service">Google Scholar</p>
+      <p class="contact-card__value">Kofi Ampomah</p>
+    </a>
   </div>
 </section>
 
@@ -665,125 +784,6 @@
         <p class="news-sub">Graduated with First Class Honours in B.Sc. Computer Engineering from Ghana Communication Technology University, Accra.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ══ CERTIFICATIONS ══ -->
-<section id="certifications" class="section">
-  <div class="section-head reveal">
-    <span class="section-eyebrow">certifications</span>
-    <h2 class="section-title">Professional Certificates</h2>
-    <p class="section-sub">16+ verified Credly badges: IBM Data Science, IBM ML, Google IT Support, Google Project Management, and more, plus 45+ course certificates spanning AI, data science, cybersecurity, project management, and digital marketing.</p>
-  </div>
-
-  <div class="link-banner reveal">
-    <p><i class="fa-solid fa-certificate"></i>View verified digital badges on Credly</p>
-    <a href="https://www.credly.com/users/ampomahkofi" target="_blank" rel="noopener" class="btn btn--ghost" style="font-size:.8rem;padding:.45rem 1.1rem;">Open Credly ↗</a>
-  </div>
-
-  <div class="cert-grid">
-    <div class="card cert-card reveal reveal-delay-1">
-      <div class="cert-card__head">
-        <div class="cert-card__glyph"><i class="fa-brands fa-google"></i></div>
-        <div><p class="cert-card__name">Google</p><p class="cert-card__count mono">15 Certificates · Coursera</p></div>
-      </div>
-      <ul class="cert-card__list">
-        <li class="hl"><i class="fa-solid fa-shield-halved"></i><span>Google Cybersecurity Professional Certificate <span class="cert-inprogress">COMPLETED 2026</span></span></li>
-        {{ range slice "Google Project Management Professional Certificate" "Capstone: Applying Project Management in the Real World" "Agile Project Management" "Project Execution: Running the Project" "Project Planning: Putting It All Together" "Google IT Support Professional Certificate" "IT Security: Defense against the Digital Dark Arts" "System Administration and IT Infrastructure Services" "Operating Systems and You: Becoming a Power User" "The Bits and Bytes of Computer Networking" "Project Initiation: Starting a Successful Project" "Foundations of Project Management" "Foundations of Cybersecurity" "Technical Support Fundamentals" "Google Analytics" }}
-        <li><i class="fa-solid fa-circle-check"></i><span>{{ . }}</span></li>
-        {{ end }}
-      </ul>
-    </div>
-
-    <div class="card cert-card reveal reveal-delay-2">
-      <div class="cert-card__head">
-        <div class="cert-card__glyph"><i class="fa-solid fa-microchip"></i></div>
-        <div><p class="cert-card__name">IBM</p><p class="cert-card__count mono">13 Certificates · Coursera</p></div>
-      </div>
-      <ul class="cert-card__list">
-        {{ range slice "IBM Data Science Professional Certificate" "Data Scientist Career Guide and Interview Preparation" "Generative AI: Elevate Your Data Science Career" "Applied Data Science Capstone" "Machine Learning with Python" "Data Visualization with Python" "Data Analysis with Python" "Databases and SQL for Data Science with Python" "Python Project for Data Science" "Python for Data Science, AI &amp; Development" "Data Science Methodology" "Tools for Data Science" "What is Data Science?" }}
-        <li><i class="fa-solid fa-circle-check"></i><span>{{ . }}</span></li>
-        {{ end }}
-      </ul>
-    </div>
-
-    <div class="card cert-card reveal reveal-delay-1">
-      <div class="cert-card__head">
-        <div class="cert-card__glyph"><i class="fa-brands fa-meta"></i></div>
-        <div><p class="cert-card__name">Meta</p><p class="cert-card__count mono">5 Certificates · Coursera</p></div>
-      </div>
-      <ul class="cert-card__list">
-        {{ range slice "Introduction to Social Media Marketing" "Social Media Management" "Advertising with Meta" "Fundamentals of Social Media Advertising" "Measure and Optimize Social Media Marketing Campaigns" }}
-        <li><i class="fa-solid fa-circle-check"></i><span>{{ . }}</span></li>
-        {{ end }}
-      </ul>
-    </div>
-
-    <div class="card cert-card reveal reveal-delay-2">
-      <div class="cert-card__head">
-        <div class="cert-card__glyph"><i class="fa-solid fa-award"></i></div>
-        <div><p class="cert-card__name">Others</p><p class="cert-card__count mono">12 Certificates · Various Providers</p></div>
-      </div>
-      <ul class="cert-card__list">
-        {{ range slice "Coursera: Data Science Orientation" "CVS Health: Introduction to Customer Service" "Macquarie University: Excel Fundamentals for Data Analysis" "Duke University: Data Science Math Skills" "4EU+ Alliance: Data Literacy" "J.P. Morgan: Software Engineering Job Simulation (Forage)" "Birdify: Learning Data Visualization" "Birdify: Excel Statistics Essential Training" "Birdify: Data Fluency – Exploring and Describing Data" "Birdify: Learning Data Analytics" "FestMan Learning: Microsoft Excel Fundamentals" "World Education Services: Verified International Academic Qualifications" }}
-        <li><i class="fa-solid fa-circle-check"></i><span>{{ . }}</span></li>
-        {{ end }}
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ══ COUNTRIES ══ -->
-<section id="countries" class="section">
-  <div class="section-head reveal">
-    <span class="section-eyebrow">countries</span>
-    <h2 class="section-title">Countries Visited</h2>
-    <p class="section-sub">Home: Ghana &nbsp;·&nbsp; Current: USA (Alabama, plus 4 more states explored) &nbsp;·&nbsp; Transit: Rwanda, Qatar</p>
-  </div>
-  <div class="country-grid">
-    {{ range slice
-      (dict "flag" "gh" "name" "Ghana" "tag" "West Africa · Accra" "badge" "Home Country" "bcls" "country-card__badge--home")
-      (dict "flag" "us" "name" "United States" "tag" "5 states: Alabama · Georgia · South Carolina · Kentucky · Indiana" "badge" "Current" "bcls" "country-card__badge--current")
-      (dict "flag" "rw" "name" "Rwanda" "tag" "East Africa" "badge" "Transit" "bcls" "")
-      (dict "flag" "qa" "name" "Qatar" "tag" "Middle East" "badge" "Transit" "bcls" "") }}
-    <div class="card country-card reveal">
-      <img src="https://flagcdn.com/w80/{{ .flag }}.png" srcset="https://flagcdn.com/w160/{{ .flag }}.png 2x" alt="{{ .name }} flag" class="country-card__flag" loading="lazy">
-      <p class="country-card__name">{{ .name }}</p>
-      <p class="country-card__tag">{{ .tag }}</p>
-      <span class="country-card__badge {{ .bcls }}">{{ .badge }}</span>
-    </div>
-    {{ end }}
-  </div>
-</section>
-
-<!-- ══ CONTACT ══ -->
-<section id="contact" class="section">
-  <div class="section-head reveal">
-    <span class="section-eyebrow">contact</span>
-    <h2 class="section-title">Get in Touch</h2>
-    <p class="section-sub">Open to <strong>Summer 2027 security &amp; privacy internships</strong>, research collaborations, speaking invitations, and academic correspondence.</p>
-  </div>
-  <div class="contact-grid">
-    <a href="mailto:kampomah@crimson.ua.edu" class="card contact-card reveal reveal-delay-1">
-      <div class="contact-card__icon"><i class="fa-solid fa-envelope"></i></div>
-      <p class="contact-card__service">Email</p>
-      <p class="contact-card__value">kampomah@crimson.ua.edu</p>
-    </a>
-    <a href="https://www.linkedin.com/in/kofi-ampomah-306771189/" target="_blank" rel="noopener" class="card contact-card reveal reveal-delay-2">
-      <div class="contact-card__icon"><i class="fa-brands fa-linkedin-in"></i></div>
-      <p class="contact-card__service">LinkedIn</p>
-      <p class="contact-card__value">Kofi Ampomah</p>
-    </a>
-    <a href="https://github.com/Ampomah-Kofi" target="_blank" rel="noopener" class="card contact-card reveal reveal-delay-3">
-      <div class="contact-card__icon"><i class="fa-brands fa-github"></i></div>
-      <p class="contact-card__service">GitHub</p>
-      <p class="contact-card__value">@Ampomah-Kofi</p>
-    </a>
-    <a href="https://scholar.google.com/citations?user=4Z_7x2EAAAAJ&hl=en" target="_blank" rel="noopener" class="card contact-card reveal reveal-delay-4">
-      <div class="contact-card__icon"><i class="fa-solid fa-graduation-cap"></i></div>
-      <p class="contact-card__service">Google Scholar</p>
-      <p class="contact-card__value">Kofi Ampomah</p>
-    </a>
   </div>
 </section>
 

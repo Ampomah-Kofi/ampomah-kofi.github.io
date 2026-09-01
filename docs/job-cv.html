@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Kofi Ampomah — Resume</title>
+<title>Kofi Ampomah — GRC Resume</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -14,7 +14,7 @@
     max-width: 755px;
     margin: 0 auto;
     padding: 1cm 1.3cm;
-    line-height: 1.38;
+    line-height: 1.36;
   }
 
   .name {
@@ -22,12 +22,18 @@
     font-size: 15pt;
     font-weight: bold;
     letter-spacing: .3px;
-    margin-bottom: .22rem;
+    margin-bottom: .12rem;
+  }
+  .tagline {
+    text-align: center;
+    font-size: 10.5pt;
+    font-weight: bold;
+    margin-bottom: .14rem;
   }
   .contact {
     text-align: center;
     font-size: 10pt;
-    margin-bottom: .75rem;
+    margin-bottom: .7rem;
   }
   .contact a { color: #000; text-decoration: underline; }
 
@@ -37,12 +43,15 @@
     font-variant: small-caps;
     border-bottom: 1px solid #000;
     padding-bottom: .08rem;
-    margin-top: .6rem;
-    margin-bottom: .32rem;
+    margin-top: .58rem;
+    margin-bottom: .3rem;
     letter-spacing: .2px;
   }
 
-  .entry { margin-bottom: .38rem; }
+  .summary { margin-bottom: .1rem; text-align: justify; }
+  .comp { margin-bottom: .05rem; }
+
+  .entry { margin-bottom: .36rem; }
 
   .row {
     display: flex;
@@ -53,10 +62,10 @@
   .bold   { font-weight: bold; }
   .italic { font-style: italic; }
 
-  ul { padding-left: 1.25rem; margin-top: .14rem; }
-  li { margin-bottom: .1rem; list-style-type: disc; }
+  ul { padding-left: 1.25rem; margin-top: .12rem; }
+  li { margin-bottom: .09rem; list-style-type: disc; }
 
-  .skills-block { margin-bottom: .08rem; }
+  .skills-block { margin-bottom: .06rem; }
 
   .print-btn {
     position: fixed; top: 1rem; right: 1rem;
@@ -68,7 +77,7 @@
 
   @media print {
     .print-btn { display: none; }
-    body { padding: .85cm 1.1cm; }
+    body { padding: .8cm 1.05cm; }
   }
 </style>
 </head>
@@ -77,114 +86,129 @@
 <button class="print-btn" onclick="window.print()">Save as PDF</button>
 
 <p class="name">KOFI AMPOMAH</p>
+<p class="tagline">Governance, Risk &amp; Compliance | AI Governance | Data Privacy</p>
 <p class="contact">
-  <a href="https://linkedin.com/in/kofi-ampomah">linkedin.com/in/kofi-ampomah</a> |
-  <a href="https://github.com/Ampomah-Kofi">github.com/Ampomah-Kofi</a> |
-  kampomah@crimson.ua.edu
+  Tuscaloosa, AL &nbsp;|&nbsp; kampomah@crimson.ua.edu &nbsp;|&nbsp;
+  <a href="https://linkedin.com/in/kofi-ampomah">linkedin.com/in/kofi-ampomah</a> &nbsp;|&nbsp;
+  <a href="https://github.com/Ampomah-Kofi">github.com/Ampomah-Kofi</a> &nbsp;|&nbsp;
+  <a href="https://ampomah-kofi.github.io">ampomah-kofi.github.io</a>
 </p>
+
+<h2>Summary</h2>
+<p class="summary">Computer Science PhD researcher in usable security and privacy, focused on AI governance, third-party risk (TPRM), and privacy assurance. Audited 23,000 third-party integrations against a 31-theme privacy taxonomy and completed a full-cycle NIST CSF 2.0 assessment: risk register, control review, POA&amp;M, and executive reporting. Seeking a Summer 2027 GRC internship.</p>
+
+<h2>Core Competencies</h2>
+<p class="comp">Risk Assessment &middot; Third-Party Risk &middot; Vendor Due Diligence &middot; Control Mapping &middot; Privacy Impact Assessment &middot; Audit Evidence &middot; Policy Analysis &middot; Risk Registers &middot; POA&amp;M &middot; Remediation Tracking &middot; Threat Modeling &middot; AI Governance</p>
+
+<h2>Experience</h2>
+
+<div class="entry">
+  <div class="row">
+    <span class="bold">Graduate Research &amp; Teaching Assistant</span>
+    <span>Aug 2025 – Present</span>
+  </div>
+  <div class="italic">UA SPECTRAL Lab, The University of Alabama, Tuscaloosa, AL</div>
+  <ul>
+    <li>Designed BotLens, a repeatable privacy auditing framework covering 23,000 third-party Discord bots and 183,142 user reviews, surfacing disclosure, data-sharing, access-control, and security concerns.</li>
+    <li>Created a 31-theme security and privacy taxonomy and automated Python evidence pipeline; manually validated 8,832 flagged records and documented criteria, evidence sources, and limitations.</li>
+    <li>Translated technical findings into documentation, figures, and reviewer responses for technical and non-technical audiences; led Computer Networks labs.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <span class="bold">Large Language Model Researcher</span>
+    <span>Jan 2024 – May 2024</span>
+  </div>
+  <div class="italic">Datamaker GH</div>
+  <ul>
+    <li>Applied structured labeling protocols, validation rules, and quality checks to multilingual LLM datasets, maintaining auditable records of data issues and label corrections.</li>
+    <li>Flagged recurring annotation inconsistencies and escalated them to reviewers, improving dataset traceability.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <span class="bold">Teaching Assistant &amp; Data Analyst</span>
+    <span>Jan 2022 – Sep 2023</span>
+  </div>
+  <div class="italic">Ghana Communication Technology University</div>
+  <ul>
+    <li>Built Excel dashboards tracking system availability and performance metrics, giving IT staff weekly visibility into recurring failure points.</li>
+    <li>Supported database performance tuning and disaster recovery planning that reduced academic system downtime by 25%.</li>
+  </ul>
+</div>
+
+<h2>GRC &amp; Privacy Projects</h2>
+
+<div class="entry">
+  <div class="row">
+    <span class="bold">KAA HealthShield NIST CSF 2.0 Assessment</span>
+    <span>Aug 2026</span>
+  </div>
+  <div class="italic">Independent Portfolio Project &nbsp;·&nbsp; <a href="https://github.com/Ampomah-Kofi/kaa-healthshield-grc-assessment">GitHub</a></div>
+  <ul>
+    <li>Completed a NIST CSF 2.0 cyber risk and controls assessment for a fictional healthcare SaaS company covering AWS, IAM, patient data, third-party services, AI governance, incident response, and recovery.</li>
+    <li>Assessed 12 technology assets and developed 15 cause-and-consequence risk scenarios with inherent and residual risk, owners, treatments, due dates, and remediation priorities.</li>
+    <li>Built Current and Target Profiles, a Tier assessment, control review, evidence plan, business impact analysis, vendor assessment, POA&amp;M, executive dashboard, and leadership memo.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row">
+    <span class="bold">MCP Marketplace Privacy-Label Validator</span>
+    <span>Aug 2026 – Present</span>
+  </div>
+  <div class="italic">Independent Research Project &nbsp;·&nbsp; <a href="https://github.com/Ampomah-Kofi/mcp-privacy-label-validator">GitHub</a></div>
+  <ul>
+    <li>Developing auditable completeness and consistency checks for privacy disclosures in AI marketplaces, explicitly evaluating AI agent tool choices and how models respond to neutral marketplace descriptions.</li>
+    <li>Assessing data collection, third-party sharing, authentication, data retention, and encryption to support safe AI adoption.</li>
+  </ul>
+</div>
 
 <h2>Education</h2>
 
 <div class="entry">
   <div class="row">
-    <span class="bold">The University of Alabama, Tuscaloosa, AL, USA</span>
+    <span class="bold">The University of Alabama, Tuscaloosa, AL</span>
     <span>Expected Dec 2030</span>
   </div>
   <div>Doctor of Philosophy in Computer Science</div>
-  <div class="italic">Focus Area: Usable Security and Privacy, Human-Centered Computing, AI Security, Adversarial ML &nbsp;·&nbsp; Advisor: Dr. Tu Le</div>
+  <div class="italic">Focus: Usable Security, Privacy, AI Security &nbsp;·&nbsp; Advisor: Dr. Tu Le</div>
 </div>
 
 <div class="entry">
   <div class="row">
-    <span class="bold">University of Ghana, Legon, Ghana</span>
-    <span>August 2024</span>
+    <span class="bold">University of Ghana, Legon</span>
+    <span>Aug 2024</span>
   </div>
   <div>Master of Science in Computer Science</div>
-  <div class="italic">Honor: Overall Best ML with Big Data Analytics Student</div>
+  <div class="italic">Honor: Best ML with Big Data Analytics Student</div>
 </div>
 
 <div class="entry">
   <div class="row">
-    <span class="bold">Ghana Communication Technology University, Accra, Ghana</span>
-    <span>July 2022</span>
+    <span class="bold">Ghana Communication Technology University, Accra</span>
+    <span>Jul 2022</span>
   </div>
   <div>Bachelor of Science in Computer Engineering</div>
-  <div class="italic">Honors: First Class Honours, Innovative Thesis Award, Second Best Engineering Graduate</div>
+  <div class="italic">Honor: First Class Honours</div>
 </div>
 
-<h2>Relevant Experience</h2>
-
-<div class="entry">
-  <div class="row">
-    <span class="bold">Graduate Research and Teaching Assistant</span>
-    <span>August 2025 – Present</span>
-  </div>
-  <div class="italic">UA-SPECTRAL Lab, The University of Alabama, Tuscaloosa, AL</div>
-  <ul>
-    <li>Designed BotLens, a privacy auditing framework analyzing 183,142 reviews across 23,000 Discord bots.</li>
-    <li>Trained DeBERTa-v3-large on a 33-concept security and privacy taxonomy, reaching F1 of 0.94 with 30% labeling.</li>
-    <li>Built end-to-end Python pipeline integrating Playwright scraping, Ollama llama3:8b distillation, and RTX 5090 inference.</li>
-    <li>Co-authored adversarial transferability study across 7 attacks, CNN and ViT models, and 3,500 configurations.</li>
-    <li>Led CS 438/538 Computer Networks labs under Prof. Yang Xiao (IEEE Fellow): TCP/IP, DNS, HTTP, Wireshark.</li>
-  </ul>
-</div>
-
-<div class="entry">
-  <div class="row">
-    <span class="bold">Large Language Model (LLM) Researcher</span>
-    <span>January 2024 – May 2024</span>
-  </div>
-  <div class="italic">Datamaker GH, Accra, Ghana</div>
-  <ul>
-    <li>Annotated and curated large-scale text datasets for LLM training and evaluation under structured NLP labeling protocols.</li>
-    <li>Performed data cleaning, validation, and quality checks across multilingual corpora to reduce noise and labeling errors.</li>
-  </ul>
-</div>
-
-<div class="entry">
-  <div class="row">
-    <span class="bold">Teaching Assistant and Data Analyst</span>
-    <span>January 2022 – September 2023</span>
-  </div>
-  <div class="italic">Department of Computer Engineering, GCTU, Accra, Ghana</div>
-  <ul>
-    <li>Supported instruction for ENCE 324 Computer Security and Disaster Recovery and ENCE 312 Software Engineering.</li>
-    <li>Tuned production academic database queries and indexes, reducing system downtime by 25%.</li>
-    <li>Built Excel analytical dashboards using PivotTables, VLOOKUP, and advanced charts to track student performance metrics.</li>
-  </ul>
-</div>
-
-<h2>Additional Experience</h2>
-
-<div class="entry">
-  <div class="row">
-    <span class="bold">Programming Instructor and Frontend Developer</span>
-    <span>June 2018 – September 2020</span>
-  </div>
-  <div class="italic">Codetrain, Accra Digital Center, Accra, Ghana</div>
-  <ul>
-    <li>Taught beginner software development, Scrum, and Agile methodology, increasing student project completion capacity by 79%.</li>
-    <li>Built responsive web apps with HTML, CSS, SASS, JavaScript, and Bootstrap; mentored 40+ early-career developers.</li>
-  </ul>
-</div>
-
-<h2>Publications</h2>
-
+<h2>Selected Publications</h2>
 <ul>
-  <li>Curl, E., <span class="bold">Ampomah, K.</span>, Erfan, M., Dibbo, S. Beyond Attack Success Rate: A Multi-Metric Evaluation of Adversarial Transferability in Medical Imaging Models. <span class="italic">arXiv:2604.16532</span>, Under Review, 2026.</li>
-  <li><span class="bold">Ampomah, K.</span>, Antwi, O. A., Akwetey, A. F. Design and Implementation of Coconut Maturity Prediction System Based on Naïve Bayes Classification Algorithm Using Arduino and a Sound Sensor. <span class="italic">IJISRT</span>, Vol. 9(1), pp. 1246–1255, 2024.</li>
+  <li><span class="bold">Ampomah, K.</span>, et al. Measuring Users' Security and Privacy Concerns About Third-Party Community Bots. <span class="italic">Under review at a top security venue, 2027.</span></li>
+  <li>Curl, E., <span class="bold">Ampomah, K.</span>, Erfan, M., &amp; Dibbo, S. V. Attack Success Rate is Not All You Need: A Comprehensive Adversarial Vulnerability Assessment in Medical AI. <span class="italic">IEEE Int. Conf. on Systems, Man, and Cybernetics (SMC), Oct 2026.</span> arXiv:2604.16532</li>
 </ul>
 
-<h2>Honors &amp; Activities</h2>
+<h2>Certifications</h2>
+<div class="skills-block">Google Cybersecurity Professional Certificate &middot; Google via Coursera (Jul 2026)</div>
+<div class="skills-block">Google Project Management, IBM Data Science &amp; Google IT Support Professional Certificates &middot; Coursera (Dec 2025 – Jan 2026) &nbsp;(<a href="https://www.credly.com/users/ampomahkofi">view on Credly</a>)</div>
 
-<div><span class="italic">Honors:</span> Upsilon Pi Epsilon (UPE) Computer Science Honor Society; Innovative Thesis Award (GCTU); Newmont Gold Corp Development Foundation Scholarship; Government of Ghana Scholarship; Volunteer for UA CS K-12 Robotics Contest organized by Prof. Jeff Gray</div>
-<div style="margin-top:.18rem;"><span class="italic">Certifications:</span> 16+ verified badges — IBM Data Science, Google IT Support, Google Project Management, IBM Machine Learning &nbsp;(<a href="https://www.credly.com/users/ampomahkofi">view on Credly</a>)</div>
-
-<h2>Technical Skills</h2>
-
-<div class="skills-block"><span class="italic">Languages:</span> Python, JavaScript, SQL, LaTeX, HTML/CSS, MATLAB</div>
-<div class="skills-block"><span class="italic">ML/AI &amp; Security:</span> PyTorch, TensorFlow, Scikit-learn, Hugging Face, Pandas, OpenCV, DeBERTa/Transformers, CNN/ViT, Adversarial ML, Threat Modeling</div>
-<div class="skills-block"><span class="italic">LLMs, Agents &amp; Tools:</span> LangChain, LangGraph, AutoGen, MCP, Claude API, Ollama, RAG, Playwright, Git, Docker</div>
+<h2>Frameworks &amp; Tools</h2>
+<div class="skills-block"><span class="italic">Frameworks:</span> NIST CSF 2.0, NIST AI RMF, NIST Privacy Framework, ISO/IEC 27001, SOC 2, HIPAA, GDPR</div>
+<div class="skills-block"><span class="italic">Tools:</span> Excel (PivotTables, VLOOKUP, dashboards), Python, SQL, Git, Docker, Wireshark, Playwright, PowerPoint</div>
+<div class="skills-block"><span class="italic">GRC Platforms (familiar):</span> OneTrust, Vanta, ServiceNow GRC</div>
 
 </body>
 </html>

@@ -5,7 +5,7 @@ theme = 'ananke'
 publishDir = 'docs'
 
 [params]
-  description = "Kofi Ampomah, Security & Privacy Researcher and PhD Student at the University of Alabama (UA-SPECTRAL Lab). Usable security & privacy, human-centered security, data security, AI policy, and adversarial ML. Seeking a Summer 2027 security & privacy internship."
+  description = "Kofi Ampomah, Security & Privacy Researcher and PhD Student at the University of Alabama (UA-SPECTRAL Lab). Usable security & privacy, human-centered security, AI governance, and third-party risk (GRC). Seeking a Summer 2027 internship in governance, risk & compliance, privacy, or security research."
   author = "Kofi Ampomah"
   ogImage = "images/profile.jpg"
   text_color = ""

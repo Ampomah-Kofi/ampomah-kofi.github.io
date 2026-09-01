@@ -527,10 +527,11 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .nav__link:focus-visi
   display: inline-flex; align-items: center; justify-content: center; font-size: .9rem;
   background: var(--accent-tint); color: var(--accent);
 }
-/* category-colored icon chips (Security, Programming, ML&AI, Tools) */
-.skills-grid .skill-card:nth-child(1) .skill-card__head i { background: var(--signal-tint); color: var(--signal); }
-.skills-grid .skill-card:nth-child(3) .skill-card__head i { background: color-mix(in srgb, var(--accent-2) 15%, transparent); color: var(--accent-2); }
-.skills-grid .skill-card:nth-child(4) .skill-card__head i { background: var(--gold-tint); color: var(--gold); }
+/* category-colored icon chips (GRC, Security, Programming, ML&AI, Tools) */
+.skills-grid .skill-card:nth-child(1) .skill-card__head i { background: color-mix(in srgb, var(--eyebrow) 14%, transparent); color: var(--eyebrow); }
+.skills-grid .skill-card:nth-child(2) .skill-card__head i { background: var(--signal-tint); color: var(--signal); }
+.skills-grid .skill-card:nth-child(4) .skill-card__head i { background: color-mix(in srgb, var(--accent-2) 15%, transparent); color: var(--accent-2); }
+.skills-grid .skill-card:nth-child(5) .skill-card__head i { background: var(--gold-tint); color: var(--gold); }
 .skill-card--agents { grid-column: 1 / -1; }
 .skill-card--agents .skill-card__head i { background: color-mix(in srgb, var(--accent-2) 15%, transparent); color: var(--accent-2); }
 .skill-badges { display: flex; flex-wrap: wrap; gap: .5rem; }
